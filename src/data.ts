@@ -1,3 +1,11 @@
+import {
+  avatarImage,
+  hangMeasTvImage,
+  hongKongShopImage,
+  musicPlayerImage,
+  tosLengBallImage,
+} from './assets/images'
+
 // Edit this file to personalise the portfolio. All values below are placeholders.
 export const profile = {
   name: 'Nim Sokny',
@@ -22,7 +30,7 @@ export const profile = {
   telegram: 'https://t.me/NimSokny',
   linkedin: 'https://www.linkedin.com/in/sokny-nim-79ab4939a/',
   github: 'https://github.com/NimSokny',
-  avatar: '/avatar.png',
+  avatar: avatarImage,
 }
 
 export const stats = [
@@ -61,7 +69,7 @@ export const projects: Project[] = [
       'Modern cross-platform mobile e-commerce application built with Flutter. Features product catalog browsing, cart management, real-time order tracking, and secure checkout.',
     category: 'Mobile',
     categories: ['Mobile'],
-    image: '/hong-kong-shop.jpg',
+    image: hongKongShopImage,
     projectUrl: '#',
     sourceUrl: '#',
     tags: ['Flutter', 'Dart', 'Firebase', 'State Management', 'REST API'],
@@ -77,7 +85,7 @@ export const projects: Project[] = [
       'Sleek and responsive mobile audio streaming app with smooth playback controls, custom playlist curation, audio visualizer, background streaming, and local caching.',
     category: 'Mobile',
     categories: ['Mobile'],
-    image: '/music-player.jpg',
+    image: musicPlayerImage,
     projectUrl: '#',
     sourceUrl: '#',
     tags: ['Flutter', 'Dart', 'Audio Player', 'BLoC', 'UI/UX'],
@@ -93,7 +101,7 @@ export const projects: Project[] = [
       'Sports community mobile app in Cambodia for finding football pitches, booking time slots, organizing friendly matches, and team notifications.',
     category: 'Mobile',
     categories: ['Mobile'],
-    image: '/tos-leng-ball.jpg',
+    image: tosLengBallImage,
     projectUrl: '#',
     sourceUrl: '#',
     tags: ['Flutter', 'Dart', 'Google Maps API', 'Firebase', 'Push Notifications'],
@@ -125,7 +133,7 @@ export const projects: Project[] = [
       'Media and entertainment streaming mobile app for Hang Meas TV. Delivers fast live streaming, video-on-demand shows, program schedules, and real-time news alerts.',
     category: 'Mobile',
     categories: ['Mobile'],
-    image: '/hang-meas-tv.jpg',
+    image: hangMeasTvImage,
     projectUrl: '#',
     sourceUrl: '#',
     tags: ['Flutter', 'Dart', 'HLS Streaming', 'Video Player', 'Cloud Firestore'],
