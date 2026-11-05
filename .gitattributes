@@ -144,3 +144,9 @@
 *.stl                filter=lfs diff=lfs merge=lfs -text
 *.nc                 filter=lfs diff=lfs merge=lfs -text
 *.mat                filter=lfs diff=lfs merge=lfs -text
+
+# ---------------------------------------------------------------------------
+# Public Web Assets Override (Store directly in Git, no Git LFS)
+# ---------------------------------------------------------------------------
+public/*             -filter -diff -merge -text
+public/**/*          -filter -diff -merge -text
