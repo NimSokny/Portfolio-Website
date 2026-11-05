@@ -1,0 +1,11 @@
+{
+  "title": "Nim Sokny - Flutter Mobile Developer Portfolio",
+  "description": "Personal portfolio of Nim Sokny, Flutter Mobile Developer crafting high-performance iOS and Android applications.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
