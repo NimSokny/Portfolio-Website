@@ -78,14 +78,12 @@ export default function Skills() {
             const isSelected = active === key
             const translatedLabel = t.skills.cats[key] || key
             return (
-              <motion.button
+              <button
                 key={key}
                 type="button"
                 aria-pressed={isSelected}
                 onClick={() => handleCategoryChange(key)}
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.95 }}
-                className={`flex flex-col items-center gap-2 px-8 py-4 rounded-2xl border transition-all duration-300 min-w-[124px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary cursor-pointer ${
+                className={`flex flex-col items-center gap-2 px-8 py-4 rounded-2xl border transition-colors duration-150 min-w-[124px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary cursor-pointer ${
                   isSelected
                     ? 'border-primary/60 bg-surface-container-high text-primary shadow-[0_0_24px_rgba(76,215,246,0.2)]'
                     : 'border-outline-variant/30 bg-surface-container-low text-on-surface-variant hover:border-primary/40 hover:text-on-surface'
@@ -96,7 +94,7 @@ export default function Skills() {
                 <span className="text-[10px] opacity-70">
                   {count(key)} {t.skills.skillsCount}
                 </span>
-              </motion.button>
+              </button>
             )
           })}
         </div>
