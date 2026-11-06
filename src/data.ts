@@ -1,5 +1,6 @@
 import {
   avatarImage,
+  franandoImage,
   hangMeasTvImage,
   hongKongShopImage,
   musicPlayerImage,
@@ -117,7 +118,7 @@ export const projects: Project[] = [
       'Cross-platform mobile lifestyle & service scheduling app offering interactive booking workflows, user profiles, notifications, and fluid animations.',
     category: 'Mobile',
     categories: ['Mobile'],
-    image: img('photo-1551650975-87deedd944c3'),
+    image: franandoImage,
     projectUrl: '#',
     sourceUrl: '#',
     tags: ['Flutter', 'Dart', 'Provider', 'REST API', 'Material 3'],
