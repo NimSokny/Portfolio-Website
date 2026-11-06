@@ -1,6 +1,7 @@
 import {
   avatarImage,
   franandoImage,
+  pnceducationImage,
   hangMeasTvImage,
   hongKongShopImage,
   musicPlayerImage,
@@ -168,8 +169,8 @@ export const projects: Project[] = [
       'Academic management web portal built for Passerelles numériques Cambodia (PNC) to track student records, grading, class attendance, assignments, and curriculum progress.',
     category: 'Web Apps',
     categories: ['Web Apps', 'UX/UI Design', 'Frontend', 'Full Stack'],
-    image: img('photo-1531482615713-2afd69097998'),
-    projectUrl: '#',
+    image: pnceducationImage,
+    projectUrl: 'http://54.227.112.85/login',
     sourceUrl: '#',
     tags: ['React.js', 'Node.js', 'Express.js', 'MySQL', 'Tailwind CSS'],
     stars: 58,
