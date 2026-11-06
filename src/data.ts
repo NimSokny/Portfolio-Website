@@ -86,7 +86,7 @@ export const projects: Project[] = [
     category: 'Mobile',
     categories: ['Mobile'],
     image: musicPlayerImage,
-    projectUrl: 'https://github.com/NimSokny/Portfolio-Website/releases/download/v1.0.0/PRO.Music_Player_1.0.0.06-11-26.8.35.apk',
+    projectUrl: 'https://github.com/NimSokny/Portfolio-Website/releases/download/v1.0.0/MusicPlayer-1.0.apk',
     sourceUrl: '#',
     tags: ['Flutter', 'Dart', 'Audio Player', 'BLoC', 'UI/UX'],
     stars: 42,

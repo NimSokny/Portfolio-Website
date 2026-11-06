@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from 'motion/react'
 import { Calendar, CheckCircle2, ChevronDown, ChevronUp, Code2, ExternalLink, Star, Trophy } from 'lucide-react'
 import { projects } from '../data'
 import { useLanguage } from '../context/LanguageContext'
+import PrivateRepoModal from './PrivateRepoModal'
 
 const filterKeys = ['All', 'Mobile', 'Web Apps', 'UX/UI Design', 'Frontend', 'Full Stack'] as const
 
@@ -10,6 +11,7 @@ export default function Projects() {
   const { lang, t } = useLanguage()
   const [active, setActive] = useState<string>('All')
   const [showAll, setShowAll] = useState(false)
+  const [modalProject, setModalProject] = useState<string | null>(null)
 
   const list =
     active === 'All'
@@ -160,17 +162,19 @@ export default function Projects() {
                     >
                       <ExternalLink size={14} /> {t.projects.liveDemo}
                     </a>
-                    <a
-                      href={p.sourceUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      aria-disabled={!p.sourceUrl}
-                      className={`flex-1 py-2.5 rounded-xl border border-outline-variant/30 text-on-surface font-bold text-xs flex items-center justify-center gap-2 hover:bg-white/5 hover:border-primary/50 transition-all duration-300 hover:scale-105 active:scale-95 ${
-                        !p.sourceUrl ? 'pointer-events-none opacity-60' : ''
-                      }`}
+                    <button
+                      type="button"
+                      onClick={() => {
+                        if (!p.sourceUrl || p.sourceUrl === '#') {
+                          setModalProject(projectTitle)
+                        } else {
+                          window.open(p.sourceUrl, '_blank', 'noopener,noreferrer')
+                        }
+                      }}
+                      className="flex-1 py-2.5 rounded-xl border border-outline-variant/30 text-on-surface font-bold text-xs flex items-center justify-center gap-2 hover:bg-white/5 hover:border-primary/50 transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer"
                     >
                       <Code2 size={14} /> {t.projects.sourceCode}
-                    </a>
+                    </button>
                   </div>
                 </div>
               </motion.article>
@@ -206,6 +210,13 @@ export default function Projects() {
           No projects found in this category.
         </p>
       )}
+
+      {/* Private Repository Modal */}
+      <PrivateRepoModal
+        isOpen={!!modalProject}
+        onClose={() => setModalProject(null)}
+        projectTitle={modalProject || ''}
+      />
     </section>
   )
 }
